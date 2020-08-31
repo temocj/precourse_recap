@@ -8,10 +8,9 @@ rand_upper = 1 + int(random.random() * 2)
 lower = randomN - rand_lower
 upper = randomN + rand_upper
 
-while True:
-    answer = input("Guess the random number between " + str(lower) + " and " + str(upper) + ": ")
-    if answer == str(randomN):
-        print("Correct!")
-        break
-    else:
-        print("Try again!")
+answer = input("Guess the random number between " + str(lower) + " and " + str(upper) + ": ")
+
+while answer != str(randomN):
+    answer = input("Try again: ")
+
+print("Correct!")
